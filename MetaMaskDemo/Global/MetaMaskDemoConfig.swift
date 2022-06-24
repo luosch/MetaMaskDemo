@@ -8,25 +8,23 @@
 import UIKit
 import SwiftUI
 
-struct MenuItem {
-    let imageName: String
-    let title: String
-}
 
 struct MetaMaskDemoConfig {
 
     static let TabItems = [
-        MetaMaskDemoTabItem(id: "Token", title: "TOKENS"),
-        MetaMaskDemoTabItem(id: "NFT", title: "NFTs"),
+        MetaMaskDemoTabItem(id: "#Token", title: "TOKENS"),
+        MetaMaskDemoTabItem(id: "#NFT", title: "NFTs"),
+    ]
+    
+    static let MenuItems = [
+        MetaMaskDemoMenuItem(id: "#Receive", title: "Receive", imageName: "Receive"),
+        MetaMaskDemoMenuItem(id: "#Buy", title: "Buy", imageName: "Buy"),
+        MetaMaskDemoMenuItem(id: "#Send", title: "Send", imageName: "Send"),
+        MetaMaskDemoMenuItem(id: "#Swap", title: "Swap", imageName: "Swap")
     ]
     
     struct MenuConfig {
-        static let MenuList: [MenuItem] = [
-            MenuItem(imageName: "Receive", title: "Receive"),
-            MenuItem(imageName: "Buy", title: "Buy"),
-            MenuItem(imageName: "Send", title: "Send"),
-            MenuItem(imageName: "Swap", title: "Swap")
-        ]
+        
     }
     
     struct ColorConfig {

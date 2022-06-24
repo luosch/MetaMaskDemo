@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E8F5CC1EABACA7FB0287ABB /* Pods_MetaMaskDemo_MetaMaskDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCC8C15543FCB5E54CD075D /* Pods_MetaMaskDemo_MetaMaskDemoUITests.framework */; };
+		3060FDCE28649D9600783681 /* MetaMaskDemoTokenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FDCD28649D9600783681 /* MetaMaskDemoTokenItem.swift */; };
+		3060FDD128649EF900783681 /* MetaMaskDemoTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FDD028649EF900783681 /* MetaMaskDemoTokenView.swift */; };
+		3060FDD32864A2F000783681 /* MetaMaskDemoReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FDD22864A2F000783681 /* MetaMaskDemoReceiveView.swift */; };
 		30756281286461E8002DCE6B /* MetaMaskDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30756280286461E8002DCE6B /* MetaMaskDemoApp.swift */; };
 		30756283286461E8002DCE6B /* MetaMaskDemoHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30756282286461E8002DCE6B /* MetaMaskDemoHomeView.swift */; };
 		30756285286461E9002DCE6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30756284286461E9002DCE6B /* Assets.xcassets */; };
@@ -43,6 +46,10 @@
 /* Begin PBXFileReference section */
 		12A826463D438C94D17B18E1 /* Pods-MetaMaskDemo-MetaMaskDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaMaskDemo-MetaMaskDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-MetaMaskDemo-MetaMaskDemoUITests/Pods-MetaMaskDemo-MetaMaskDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A4DF6292619025EA86137C6 /* Pods_MetaMaskDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetaMaskDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3060FDCD28649D9600783681 /* MetaMaskDemoTokenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTokenItem.swift; sourceTree = "<group>"; };
+		3060FDCF28649E8900783681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		3060FDD028649EF900783681 /* MetaMaskDemoTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTokenView.swift; sourceTree = "<group>"; };
+		3060FDD22864A2F000783681 /* MetaMaskDemoReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoReceiveView.swift; sourceTree = "<group>"; };
 		3075627D286461E8002DCE6B /* MetaMaskDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetaMaskDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30756280286461E8002DCE6B /* MetaMaskDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoApp.swift; sourceTree = "<group>"; };
 		30756282286461E8002DCE6B /* MetaMaskDemoHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoHomeView.swift; sourceTree = "<group>"; };
@@ -129,6 +136,7 @@
 		3075627F286461E8002DCE6B /* MetaMaskDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3060FDCF28649E8900783681 /* Info.plist */,
 				307562AB28647DB0002DCE6B /* Global */,
 				307562AE28648095002DCE6B /* Model */,
 				307562AA286462C0002DCE6B /* View */,
@@ -168,6 +176,8 @@
 			children = (
 				30756282286461E8002DCE6B /* MetaMaskDemoHomeView.swift */,
 				30A84EAB286499B300F107B8 /* MetaMaskDemoNFTView.swift */,
+				3060FDD028649EF900783681 /* MetaMaskDemoTokenView.swift */,
+				3060FDD22864A2F000783681 /* MetaMaskDemoReceiveView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +196,7 @@
 			children = (
 				307562AF286480BB002DCE6B /* MetaMaskDemoTabItem.swift */,
 				30A84EAD28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift */,
+				3060FDCD28649D9600783681 /* MetaMaskDemoTokenItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,10 +453,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				307562AD28647DCA002DCE6B /* MetaMaskDemoConfig.swift in Sources */,
+				3060FDD32864A2F000783681 /* MetaMaskDemoReceiveView.swift in Sources */,
 				30A84EAC286499B300F107B8 /* MetaMaskDemoNFTView.swift in Sources */,
+				3060FDD128649EF900783681 /* MetaMaskDemoTokenView.swift in Sources */,
 				30756283286461E8002DCE6B /* MetaMaskDemoHomeView.swift in Sources */,
 				307562B0286480BB002DCE6B /* MetaMaskDemoTabItem.swift in Sources */,
 				30756281286461E8002DCE6B /* MetaMaskDemoApp.swift in Sources */,
+				3060FDCE28649D9600783681 /* MetaMaskDemoTokenItem.swift in Sources */,
 				30A84EAE28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,13 +620,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MetaMaskDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = XZSKB63U27;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetaMaskDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,13 +653,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MetaMaskDemo/Preview Content\"";
+				DEVELOPMENT_TEAM = XZSKB63U27;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MetaMaskDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
