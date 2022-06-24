@@ -23,13 +23,8 @@ struct MetaMaskDemoConfig {
         MetaMaskDemoMenuItem(id: "#Swap", title: "Swap", imageName: "Swap")
     ]
     
-    struct MenuConfig {
-        
-    }
-    
     struct ColorConfig {
         static let BackgroundColorA = Color(red: 232.0/255.0, green: 241.0/255.0, blue: 250.0/255.0)
-        
         static let TextColorA = Color(red: 54.0/255.0, green: 124.0/255.0, blue: 201.0/255.0)
     }
     

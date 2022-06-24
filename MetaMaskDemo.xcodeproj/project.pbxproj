@@ -22,6 +22,11 @@
 		307562B0286480BB002DCE6B /* MetaMaskDemoTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307562AF286480BB002DCE6B /* MetaMaskDemoTabItem.swift */; };
 		30A84EAC286499B300F107B8 /* MetaMaskDemoNFTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A84EAB286499B300F107B8 /* MetaMaskDemoNFTView.swift */; };
 		30A84EAE28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A84EAD28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift */; };
+		53D16C782865551F00E26F5E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53D16C772865551F00E26F5E /* Launch Screen.storyboard */; };
+		53D16C7B286559FF00E26F5E /* MetaMaskDemoNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D16C7A286559FF00E26F5E /* MetaMaskDemoNetworkManager.swift */; };
+		53D16C7D28655AE100E26F5E /* MetaMaskDemoAccountInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D16C7C28655AE100E26F5E /* MetaMaskDemoAccountInfo.swift */; };
+		53D16C7F28655B1F00E26F5E /* MetaMaskDemoTokenInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D16C7E28655B1F00E26F5E /* MetaMaskDemoTokenInfo.swift */; };
+		53D16C8328656A6C00E26F5E /* MetaMaskDemoTokenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D16C8228656A6C00E26F5E /* MetaMaskDemoTokenDetailView.swift */; };
 		73185275048C155F97DF3E29 /* Pods_MetaMaskDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0D88C6B0DD0E921275FB390 /* Pods_MetaMaskDemoTests.framework */; };
 		FD3BCC65BE9B92C6C5857891 /* Pods_MetaMaskDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4DF6292619025EA86137C6 /* Pods_MetaMaskDemo.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +70,11 @@
 		30A84EAB286499B300F107B8 /* MetaMaskDemoNFTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoNFTView.swift; sourceTree = "<group>"; };
 		30A84EAD28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoMenuItem.swift; sourceTree = "<group>"; };
 		47548FF09906E26F3DEB8D66 /* Pods-MetaMaskDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaMaskDemo.debug.xcconfig"; path = "Target Support Files/Pods-MetaMaskDemo/Pods-MetaMaskDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		53D16C772865551F00E26F5E /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		53D16C7A286559FF00E26F5E /* MetaMaskDemoNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoNetworkManager.swift; sourceTree = "<group>"; };
+		53D16C7C28655AE100E26F5E /* MetaMaskDemoAccountInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoAccountInfo.swift; sourceTree = "<group>"; };
+		53D16C7E28655B1F00E26F5E /* MetaMaskDemoTokenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTokenInfo.swift; sourceTree = "<group>"; };
+		53D16C8228656A6C00E26F5E /* MetaMaskDemoTokenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTokenDetailView.swift; sourceTree = "<group>"; };
 		67CFAF7CD3BE4095036261EC /* Pods-MetaMaskDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaMaskDemo.release.xcconfig"; path = "Target Support Files/Pods-MetaMaskDemo/Pods-MetaMaskDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6FCC8C15543FCB5E54CD075D /* Pods_MetaMaskDemo_MetaMaskDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetaMaskDemo_MetaMaskDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EAF9CACEB8DF263D9790B1 /* Pods-MetaMaskDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MetaMaskDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-MetaMaskDemoTests/Pods-MetaMaskDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,7 +150,8 @@
 				307562AB28647DB0002DCE6B /* Global */,
 				307562AE28648095002DCE6B /* Model */,
 				307562AA286462C0002DCE6B /* View */,
-				30756284286461E9002DCE6B /* Assets.xcassets */,
+				53D16C79286559EB00E26F5E /* Manager */,
+				53D16C762865550C00E26F5E /* Resource */,
 				30756286286461E9002DCE6B /* Preview Content */,
 			);
 			path = MetaMaskDemo;
@@ -178,6 +189,7 @@
 				30A84EAB286499B300F107B8 /* MetaMaskDemoNFTView.swift */,
 				3060FDD028649EF900783681 /* MetaMaskDemoTokenView.swift */,
 				3060FDD22864A2F000783681 /* MetaMaskDemoReceiveView.swift */,
+				53D16C8228656A6C00E26F5E /* MetaMaskDemoTokenDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,8 +209,27 @@
 				307562AF286480BB002DCE6B /* MetaMaskDemoTabItem.swift */,
 				30A84EAD28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift */,
 				3060FDCD28649D9600783681 /* MetaMaskDemoTokenItem.swift */,
+				53D16C7C28655AE100E26F5E /* MetaMaskDemoAccountInfo.swift */,
+				53D16C7E28655B1F00E26F5E /* MetaMaskDemoTokenInfo.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		53D16C762865550C00E26F5E /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				30756284286461E9002DCE6B /* Assets.xcassets */,
+				53D16C772865551F00E26F5E /* Launch Screen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		53D16C79286559EB00E26F5E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				53D16C7A286559FF00E26F5E /* MetaMaskDemoNetworkManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		F0A0A3854E2EA99DCC963EB9 /* Pods */ = {
@@ -323,6 +354,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53D16C782865551F00E26F5E /* Launch Screen.storyboard in Resources */,
 				30756288286461E9002DCE6B /* Preview Assets.xcassets in Resources */,
 				30756285286461E9002DCE6B /* Assets.xcassets in Resources */,
 			);
@@ -456,11 +488,15 @@
 				3060FDD32864A2F000783681 /* MetaMaskDemoReceiveView.swift in Sources */,
 				30A84EAC286499B300F107B8 /* MetaMaskDemoNFTView.swift in Sources */,
 				3060FDD128649EF900783681 /* MetaMaskDemoTokenView.swift in Sources */,
+				53D16C7D28655AE100E26F5E /* MetaMaskDemoAccountInfo.swift in Sources */,
+				53D16C7B286559FF00E26F5E /* MetaMaskDemoNetworkManager.swift in Sources */,
 				30756283286461E8002DCE6B /* MetaMaskDemoHomeView.swift in Sources */,
 				307562B0286480BB002DCE6B /* MetaMaskDemoTabItem.swift in Sources */,
 				30756281286461E8002DCE6B /* MetaMaskDemoApp.swift in Sources */,
 				3060FDCE28649D9600783681 /* MetaMaskDemoTokenItem.swift in Sources */,
+				53D16C8328656A6C00E26F5E /* MetaMaskDemoTokenDetailView.swift in Sources */,
 				30A84EAE28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift in Sources */,
+				53D16C7F28655B1F00E26F5E /* MetaMaskDemoTokenInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,6 +663,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -660,6 +697,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

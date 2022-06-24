@@ -9,16 +9,18 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct MetaMaskDemoTokenView: View {
-
+    
+    @Binding var tokens: [MetaMaskDemoTokenInfo]
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 0) {
-                ForEach(tokenItems) { item in
+                ForEach(tokens, id: \.id) { item in
                     NavigationLink {
-                        MetaMaskDemoReceiveView()
+                        MetaMaskDemoTokenDetailView()
                     } label: {
                         HStack(spacing: 10) {
-                            WebImage(url: URL(string: item.imageURL))
+                            WebImage(url: URL(string: item.icon_url))
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 60, height: 60)
@@ -27,7 +29,7 @@ struct MetaMaskDemoTokenView: View {
                             VStack(alignment: .leading, spacing: 6) {
                                 Text("\(item.amount) \(item.name)")
                                     .foregroundColor(.black)
-                                Text("\(item.totalPrice)")
+                                Text("\(item.balance)")
                                     .foregroundColor(.black)
                             }
                             

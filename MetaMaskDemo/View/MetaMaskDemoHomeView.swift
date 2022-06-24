@@ -10,19 +10,24 @@ import SDWebImageSwiftUI
 
 struct MetaMaskDemoHomeView: View {
     
+    @State private var accountInfo = MetaMaskDemoAccountInfo.default
     @State private var selectedIndex = 0
     @State private var isShowingReceiveView = false
+    @State private var isShowingLoadingView = true
     
     var body: some View {
         NavigationView {
             VStack {
+                if isShowingLoadingView {
+                    ProgressView("")
+                }
                 MetaMaskDemoHomeNavigationView()
                 
                 VStack(spacing: 5) {
                     Button {
                         
                     } label: {
-                        WebImage(url: URL(string: "https://avatars.githubusercontent.com/u/6956493?v=4"))
+                        WebImage(url: URL(string: accountInfo.avatar_url))
                             .placeholder(Image("DefaultAvatar"))
                             .resizable()
                             .scaledToFill()
@@ -32,17 +37,19 @@ struct MetaMaskDemoHomeView: View {
                             .background(Circle().stroke(Color.blue, lineWidth: 2))
                     }
 
-                    Text("Account 1")
+                    Text(accountInfo.user_name)
                         .font(.title)
                     
-                    Text("$0")
+                    Text(accountInfo.balance)
                         .font(Font.system(size: 14))
                         .foregroundColor(.gray)
                     
-                    Text("0x47d5...78B3")
+                    Text(accountInfo.id)
                         .font(Font.system(size: 14))
                         .padding(.horizontal, 16)
                         .padding(.vertical, 6)
+                        .frame(width: 150, height: 32)
+                        .truncationMode(.middle)
                         .background(Capsule().fill(MetaMaskDemoConfig.ColorConfig.BackgroundColorA))
                     
                     HStack(spacing: 30) {
@@ -65,7 +72,11 @@ struct MetaMaskDemoHomeView: View {
                 }
                 
                 TabView(selection: $selectedIndex) {
-                    MetaMaskDemoTokenView().tag(0)
+                    MetaMaskDemoTokenView(tokens: Binding(get: {
+                        return accountInfo.tokens
+                    }, set: {
+                        accountInfo.tokens = $0
+                    })).tag(0)
                     MetaMaskDemoNFTView().tag(1)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
@@ -102,6 +113,18 @@ struct MetaMaskDemoHomeView: View {
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
+        }.onAppear() {
+            isShowingLoadingView = true
+            
+            MetaMaskDemoNetworkManager.shared.fetchAccountInfo { accountInfo in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    isShowingLoadingView = false
+                }
+                
+                if let newAccountInfo = accountInfo {
+                    self.accountInfo = newAccountInfo
+                }
+            }
         }
     }
 }
