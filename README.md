@@ -114,25 +114,25 @@ https://chinaeasy.net/api/account_${tokenID}.json
 ### Test Cases
 
 * Test Case 1
-Enter this app, after loading network data.
+	Enter this app, after loading network data.
 
-Expect1: user name is "luosch"
+	Expect1: user name is "luosch"
 
-Expect2: balance is "$1000"
+	Expect2: balance is "$1000"
 
 * Test Case 2
-Enter this app, after loading network data, click ETH cell on th TOKENS list.
+	Enter this app, after loading network data, click ETH cell on th TOKENS list.
 
-Expect1: Enter ETH Token detail view
+	Expect1: Enter ETH Token detail view
 
-Expect2: balance is "$36788.8"
+	Expect2: balance is "$36788.8"
 
-Expect2: see two transactions
+	Expect2: see two transactions
 
 * Test Case 3
-Enter this app, after loading network data, click Receive
+	Enter this app, after loading network data, click Receive
 
-Expect1: Enter Receive page
+	Expect1: Enter Receive page
 
 Expect2: See a qrcode
 
