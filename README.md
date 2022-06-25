@@ -117,17 +117,23 @@ https://chinaeasy.net/api/account_${tokenID}.json
 Enter this app, after loading network data.
 
 Expect1: user name is "luosch"
+
 Expect2: balance is "$1000"
 
 * Test Case 2
 Enter this app, after loading network data, click ETH cell on th TOKENS list.
 
 Expect1: Enter ETH Token detail view
+
 Expect2: balance is "$36788.8"
+
 Expect2: see two transactions
 
 * Test Case 3
 Enter this app, after loading network data, click Receive
+
 Expect1: Enter Receive page
+
 Expect2: See a qrcode
+
 Expect3: See a address "0x47d5c76e3c7299fd6628203Ca059CaeFc0C978B3"
