@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MetaMaskDemoTokenInfo: Codable, Identifiable {
+struct MetaMaskDemoTokenInfo: Codable {
     var id: String = ""
     var icon_url: String = ""
     var name: String = ""

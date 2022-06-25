@@ -10,7 +10,8 @@ import SDWebImageSwiftUI
 
 struct MetaMaskDemoHomeView: View {
     
-    @State private var accountInfo = MetaMaskDemoAccountInfo.default
+//    @StateObject private var networkManager = MetaMaskDemoNetworkManager()
+    @State private var accountInfo: MetaMaskDemoAccountInfo = MetaMaskDemoAccountInfo()
     @State private var selectedIndex = 0
     @State private var isShowingReceiveView = false
     @State private var isShowingLoadingView = true
@@ -72,11 +73,7 @@ struct MetaMaskDemoHomeView: View {
                 }
                 
                 TabView(selection: $selectedIndex) {
-                    MetaMaskDemoTokenView(tokens: Binding(get: {
-                        return accountInfo.tokens
-                    }, set: {
-                        accountInfo.tokens = $0
-                    })).tag(0)
+                    MetaMaskDemoTokenView(tokens: accountInfo.tokens).tag(0)
                     MetaMaskDemoNFTView().tag(1)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
@@ -121,8 +118,8 @@ struct MetaMaskDemoHomeView: View {
                     isShowingLoadingView = false
                 }
                 
-                if let newAccountInfo = accountInfo {
-                    self.accountInfo = newAccountInfo
+                if let accountInfo = accountInfo {
+                    self.accountInfo = accountInfo
                 }
             }
         }

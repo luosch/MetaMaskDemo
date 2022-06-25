@@ -7,31 +7,49 @@
 
 import UIKit
 
-class MetaMaskDemoNetworkManager: NSObject {
+class MetaMaskDemoNetworkManager {
 
     let accountInfoURLString = "https://chinaeasy.net/api/account_info.json"
     
-    static let shared = MetaMaskDemoNetworkManager()
+//    @Published var accountInfo: MetaMaskDemoAccountInfo = MetaMaskDemoAccountInfo()
     
-    private override init() {
-        
-    }
+    static let shared = MetaMaskDemoNetworkManager()
     
     func fetchAccountInfo(_ completion: @escaping (MetaMaskDemoAccountInfo?) -> Void) {
         guard let url = URL(string: accountInfoURLString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else {
-                print("[MetaMaskDemoNetworkManager] error: data is nil")
+                print("[MetaMaskDemoNetworkManager fetchAccountInfo] error: data is nil")
                 completion(nil)
                 return
             }
             
             do {
                 let accountInfo = try JSONDecoder().decode(MetaMaskDemoAccountInfo.self, from: data)
-                print("[MetaMaskDemoNetworkManager] success: fetch account info")
+                print("[MetaMaskDemoNetworkManager fetchAccountInfo] success: fetch account info")
                 completion(accountInfo)
             } catch {
+            }
+        }.resume()
+    }
+    
+    func fetchTokenInfo(tokenID: String, completion: @escaping (MetaMaskDemoTokenDetailInfo?) -> Void) {
+        guard let url = URL(string: "https://chinaeasy.net/api/token_\(tokenID).json") else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {
+                print("[MetaMaskDemoNetworkManager fetchTokenInfo] error: data is nil")
+                completion(nil)
+                return
+            }
+            
+            do {
+                let accountInfo = try JSONDecoder().decode(MetaMaskDemoTokenDetailInfo.self, from: data)
+                print("[MetaMaskDemoNetworkManager fetchTokenInfo] success: fetch account info")
+                completion(accountInfo)
+            } catch {
+                print("[MetaMaskDemoNetworkManager fetchTokenInfo] error: json decode fail")
+                completion(nil)
             }
         }.resume()
     }

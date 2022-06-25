@@ -8,15 +8,9 @@
 import UIKit
 
 struct MetaMaskDemoAccountInfo: Codable {
-    var id: String
-    var user_name: String
-    var avatar_url: String
-    var balance: String
-    var tokens: [MetaMaskDemoTokenInfo]
-    
-    static let `default` = MetaMaskDemoAccountInfo(id: "",
-                                                   user_name: "Account 1",
-                                                   avatar_url: "",
-                                                   balance: "$0",
-                                                   tokens: [])
+    var id: String = ""
+    var user_name: String = "Account 1"
+    var avatar_url: String = ""
+    var balance: String = "$0"
+    var tokens: [MetaMaskDemoTokenInfo] = []
 }

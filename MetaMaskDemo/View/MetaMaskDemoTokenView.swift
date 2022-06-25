@@ -10,14 +10,14 @@ import SDWebImageSwiftUI
 
 struct MetaMaskDemoTokenView: View {
     
-    @Binding var tokens: [MetaMaskDemoTokenInfo]
+    var tokens: [MetaMaskDemoTokenInfo] = []
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 0) {
                 ForEach(tokens, id: \.id) { item in
                     NavigationLink {
-                        MetaMaskDemoTokenDetailView()
+                        MetaMaskDemoTokenDetailView(tokenID: item.id, tokenName: item.name)
                     } label: {
                         HStack(spacing: 10) {
                             WebImage(url: URL(string: item.icon_url))
