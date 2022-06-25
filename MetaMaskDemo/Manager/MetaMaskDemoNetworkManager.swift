@@ -11,8 +11,6 @@ class MetaMaskDemoNetworkManager {
 
     let accountInfoURLString = "https://chinaeasy.net/api/account_info.json"
     
-//    @Published var accountInfo: MetaMaskDemoAccountInfo = MetaMaskDemoAccountInfo()
-    
     static let shared = MetaMaskDemoNetworkManager()
     
     func fetchAccountInfo(_ completion: @escaping (MetaMaskDemoAccountInfo?) -> Void) {
@@ -44,9 +42,9 @@ class MetaMaskDemoNetworkManager {
             }
             
             do {
-                let accountInfo = try JSONDecoder().decode(MetaMaskDemoTokenDetailInfo.self, from: data)
+                let detailInfo = try JSONDecoder().decode(MetaMaskDemoTokenDetailInfo.self, from: data)
                 print("[MetaMaskDemoNetworkManager fetchTokenInfo] success: fetch account info")
-                completion(accountInfo)
+                completion(detailInfo)
             } catch {
                 print("[MetaMaskDemoNetworkManager fetchTokenInfo] error: json decode fail")
                 completion(nil)

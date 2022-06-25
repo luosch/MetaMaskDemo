@@ -10,7 +10,6 @@
 		1E8F5CC1EABACA7FB0287ABB /* Pods_MetaMaskDemo_MetaMaskDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCC8C15543FCB5E54CD075D /* Pods_MetaMaskDemo_MetaMaskDemoUITests.framework */; };
 		30528FB828669DC7000B8392 /* MetaMaskDemoTokenDetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30528FB728669DC7000B8392 /* MetaMaskDemoTokenDetailInfo.swift */; };
 		30528FBA28669E1A000B8392 /* MetaMaskDemoTransactionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30528FB928669E1A000B8392 /* MetaMaskDemoTransactionInfo.swift */; };
-		3060FDCE28649D9600783681 /* MetaMaskDemoTokenItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FDCD28649D9600783681 /* MetaMaskDemoTokenItem.swift */; };
 		3060FDD128649EF900783681 /* MetaMaskDemoTokenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FDD028649EF900783681 /* MetaMaskDemoTokenView.swift */; };
 		3060FDD32864A2F000783681 /* MetaMaskDemoReceiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3060FDD22864A2F000783681 /* MetaMaskDemoReceiveView.swift */; };
 		30756281286461E8002DCE6B /* MetaMaskDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30756280286461E8002DCE6B /* MetaMaskDemoApp.swift */; };
@@ -55,7 +54,6 @@
 		1A4DF6292619025EA86137C6 /* Pods_MetaMaskDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MetaMaskDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30528FB728669DC7000B8392 /* MetaMaskDemoTokenDetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTokenDetailInfo.swift; sourceTree = "<group>"; };
 		30528FB928669E1A000B8392 /* MetaMaskDemoTransactionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTransactionInfo.swift; sourceTree = "<group>"; };
-		3060FDCD28649D9600783681 /* MetaMaskDemoTokenItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTokenItem.swift; sourceTree = "<group>"; };
 		3060FDCF28649E8900783681 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3060FDD028649EF900783681 /* MetaMaskDemoTokenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoTokenView.swift; sourceTree = "<group>"; };
 		3060FDD22864A2F000783681 /* MetaMaskDemoReceiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetaMaskDemoReceiveView.swift; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 			children = (
 				307562AF286480BB002DCE6B /* MetaMaskDemoTabItem.swift */,
 				30A84EAD28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift */,
-				3060FDCD28649D9600783681 /* MetaMaskDemoTokenItem.swift */,
 				53D16C7C28655AE100E26F5E /* MetaMaskDemoAccountInfo.swift */,
 				53D16C7E28655B1F00E26F5E /* MetaMaskDemoTokenInfo.swift */,
 				30528FB728669DC7000B8392 /* MetaMaskDemoTokenDetailInfo.swift */,
@@ -501,7 +498,6 @@
 				30756283286461E8002DCE6B /* MetaMaskDemoHomeView.swift in Sources */,
 				307562B0286480BB002DCE6B /* MetaMaskDemoTabItem.swift in Sources */,
 				30756281286461E8002DCE6B /* MetaMaskDemoApp.swift in Sources */,
-				3060FDCE28649D9600783681 /* MetaMaskDemoTokenItem.swift in Sources */,
 				53D16C8328656A6C00E26F5E /* MetaMaskDemoTokenDetailView.swift in Sources */,
 				30A84EAE28649BDE00F107B8 /* MetaMaskDemoMenuItem.swift in Sources */,
 				53D16C7F28655B1F00E26F5E /* MetaMaskDemoTokenInfo.swift in Sources */,

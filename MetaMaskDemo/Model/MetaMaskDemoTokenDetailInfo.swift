@@ -8,11 +8,11 @@
 import UIKit
 
 struct MetaMaskDemoTokenDetailInfo: Codable {
-    let id: String
-    let icon_url: String
-    let name: String
-    let amount: String
-    let balance: String
+    var id: String = ""
+    var icon_url: String = ""
+    var name: String = ""
+    var amount: String = ""
+    var balance: String = ""
     
-    let transactions: [MetaMaskDemoTransactionInfo]
+    var transactions: [MetaMaskDemoTransactionInfo] = []
 }

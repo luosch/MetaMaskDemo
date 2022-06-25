@@ -7,13 +7,13 @@
 	"transactions": [
 		{
 			"id": "6",
-			"timestamp": "1646107200",
+			"timestamp": 1646107200.0,
 			"amount": "+6",
 			"address": "0x47d5c76e3c7299fd6628203Ca059CaeFc0C978B3",
 		},
 		{
 			"id": "5",
-			"timestamp": "1648082554",
+			"timestamp": 1648082554.0,
 			"amount": "+6",
 			"address": "0x47d5c76e3c7299fd6628203Ca059CaeFc0C978B3",
 		}
