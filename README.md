@@ -134,6 +134,6 @@ https://chinaeasy.net/api/account_${tokenID}.json
 
 	Expect1: Enter Receive page
 
-Expect2: See a qrcode
+	Expect2: See a qrcode
 
-Expect3: See a address "0x47d5c76e3c7299fd6628203Ca059CaeFc0C978B3"
+	Expect3: See a address "0x47d5c76e3c7299fd6628203Ca059CaeFc0C978B3"
